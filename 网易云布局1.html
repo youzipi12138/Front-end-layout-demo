@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      aside{
+        width: 190px;
+        background-color: grey;
+        overflow-y: auto;
+      }
+      .left{
+        flex: 1;
+        flex-direction: column;
+        background-color: blue;
+      }
+      header{
+        height: 80px;
+        background-color: gold;
+      }
+      main{
+        flex: 1;
+        background-color: green;
+      }
+      footer{
+        height: 80px;
+        background-color: red;
+      }
+    </style>
+<body>
+    <div class="app">
+      <section>
+        <aside>aside</aside>
+          <section class="left">
+            <header>hedfs</header>
+            <main>sdf</main>
+          </section>
+      </section>
+      <footer>footer</footer>
+    </div>    
+</body>
+</html>
