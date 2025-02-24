@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网易云客户端布局</title>
+  <style>
+    /* 重置默认样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 布局样式 */
+    .app {
+      display: flex;
+      flex-direction: column;
+      height: 100vh; /* 整个应用占满视口高度 */
+    }
+
+    .header {
+      height: 60px; /* 顶部导航栏高度 */
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .content {
+      display: flex;
+      flex: 1; /* 内容区域占满剩余空间 */
+      overflow: hidden; /* 防止内容溢出 */
+    }
+
+    .aside {
+      width: 200px; /* 侧边栏宽度 */
+      background-color: #f4f4f4;
+      overflow-y: auto; /* 允许侧边栏滚动 */
+    }
+
+    .main {
+      flex: 1; /* 主内容区占满剩余宽度 */
+      background-color: #fff;
+      overflow-y: auto; /* 允许主内容区滚动 */
+    }
+
+    .footer {
+      height: 80px; /* 底部播放栏高度 */
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="header">顶部导航栏</div>
+    <div class="content">
+      <div class="aside">侧边栏</div>
+      <div class="main">主内容区</div>
+    </div>
+    <div class="footer">底部播放栏</div>
+  </div>
+</body>
+</html>
