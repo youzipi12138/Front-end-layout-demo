@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>按钮气泡提示</title>
+  <style>
+    /* 按钮样式 */
+    .button {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* 气泡容器 */
+    .bubble {
+      position: absolute;
+      top: -50px; /* 气泡位于按钮上方 */
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      opacity: 0; /* 默认隐藏 */
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      white-space: nowrap; /* 防止文字换行 */
+    }
+
+    /* 气泡小三角 */
+    .bubble::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #007bff transparent transparent transparent;
+    }
+
+    /* 鼠标悬停时显示气泡 */
+    .button:hover .bubble {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <div style="height: 80px;"></div>
+  <div class="button">
+    悬停按钮
+    <div class="bubble">请提供图片</div>
+  </div>
+</body>
+</html>
